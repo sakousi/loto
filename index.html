@@ -38,26 +38,28 @@
         <div class="container">
             <div class="game__content">
                 <div class="game__content_left">
-                        <h3>Faites votre</h3>
+                        <h3>Faites votre jeu</h3>
                         <label for="serial">
                             <p class="game__content_left_title">Numeros:</p>
-                            <input type="text" class="game__content_left_input">
+                            <input type="text" id="values" class="game__content_left_input">
                         </label>
                         <label for="luck">
                             <p class="game__content_left_title">Numero chance:</p>
-                            <input type="number" class="game__content_left_input">
+                            <input type="text" id="luck" class="game__content_left_input">
                         </label>
-                        <button onclick="">Valider</button>
+                        <button onclick="loto(document.getElementById('values').value, document.getElementById('luck').value)">Valider</button>
                 </div>
                 <div class="game__content_right">
                     <div class="container">
                         <h3 class="game__content_right_title">Resultats</h3>
-                        <p class="game__content_right_numero"></p>
+                        <p>Mise a gagnier: <b id="monney"></b>€</p>
+                        <p class="game__content_right_numero">Tu remporte: <b id="prize">0</b>€</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
